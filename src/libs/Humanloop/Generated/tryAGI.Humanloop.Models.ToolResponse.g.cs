@@ -196,6 +196,18 @@ namespace tryAGI.Humanloop
         /// <param name="id">
         /// Unique identifier for the Tool.
         /// </param>
+        /// <param name="name">
+        /// Name of the Tool.
+        /// </param>
+        /// <param name="versionId">
+        /// Unique identifier for the specific Tool Version.
+        /// </param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="lastUsedAt"></param>
+        /// <param name="versionLogsCount"></param>
+        /// <param name="totalLogsCount"></param>
+        /// <param name="inputs"></param>
         /// <param name="directoryId"></param>
         /// <param name="function"></param>
         /// <param name="sourceCode">
@@ -208,24 +220,12 @@ namespace tryAGI.Humanloop
         /// </param>
         /// <param name="versionName"></param>
         /// <param name="versionDescription"></param>
-        /// <param name="name">
-        /// Name of the Tool.
-        /// </param>
         /// <param name="description"></param>
         /// <param name="readme"></param>
         /// <param name="tags"></param>
-        /// <param name="versionId">
-        /// Unique identifier for the specific Tool Version.
-        /// </param>
         /// <param name="type"></param>
         /// <param name="environments"></param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
         /// <param name="createdBy"></param>
-        /// <param name="lastUsedAt"></param>
-        /// <param name="versionLogsCount"></param>
-        /// <param name="totalLogsCount"></param>
-        /// <param name="inputs"></param>
         /// <param name="evaluators"></param>
         /// <param name="evaluatorAggregates"></param>
         /// <param name="signature"></param>
@@ -263,14 +263,6 @@ namespace tryAGI.Humanloop
         {
             this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.VersionId = versionId ?? throw new global::System.ArgumentNullException(nameof(versionId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
-            this.LastUsedAt = lastUsedAt;
-            this.VersionLogsCount = versionLogsCount;
-            this.TotalLogsCount = totalLogsCount;
-            this.Inputs = inputs ?? throw new global::System.ArgumentNullException(nameof(inputs));
             this.DirectoryId = directoryId;
             this.Function = function;
             this.SourceCode = sourceCode;
@@ -279,12 +271,20 @@ namespace tryAGI.Humanloop
             this.ToolType = toolType;
             this.VersionName = versionName;
             this.VersionDescription = versionDescription;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
             this.Readme = readme;
             this.Tags = tags;
+            this.VersionId = versionId ?? throw new global::System.ArgumentNullException(nameof(versionId));
             this.Type = type;
             this.Environments = environments;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.CreatedBy = createdBy;
+            this.LastUsedAt = lastUsedAt;
+            this.VersionLogsCount = versionLogsCount;
+            this.TotalLogsCount = totalLogsCount;
+            this.Inputs = inputs ?? throw new global::System.ArgumentNullException(nameof(inputs));
             this.Evaluators = evaluators;
             this.EvaluatorAggregates = evaluatorAggregates;
             this.Signature = signature;

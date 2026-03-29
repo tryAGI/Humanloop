@@ -152,28 +152,28 @@ namespace tryAGI.Humanloop
         /// <param name="id">
         /// Unique identifier for the Dataset.
         /// </param>
-        /// <param name="directoryId"></param>
         /// <param name="name">
         /// Name of the Dataset.
         /// </param>
+        /// <param name="versionId">
+        /// Unique identifier for the specific Dataset Version.
+        /// </param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="lastUsedAt"></param>
+        /// <param name="datapointsCount">
+        /// The number of Datapoints in this Dataset version.
+        /// </param>
+        /// <param name="directoryId"></param>
         /// <param name="description"></param>
         /// <param name="schema"></param>
         /// <param name="readme"></param>
         /// <param name="tags"></param>
-        /// <param name="versionId">
-        /// Unique identifier for the specific Dataset Version.
-        /// </param>
         /// <param name="type"></param>
         /// <param name="environments"></param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
         /// <param name="createdBy"></param>
-        /// <param name="lastUsedAt"></param>
         /// <param name="versionName"></param>
         /// <param name="versionDescription"></param>
-        /// <param name="datapointsCount">
-        /// The number of Datapoints in this Dataset version.
-        /// </param>
         /// <param name="datapoints"></param>
         /// <param name="attributes"></param>
 #if NET7_0_OR_GREATER
@@ -203,22 +203,22 @@ namespace tryAGI.Humanloop
         {
             this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.VersionId = versionId ?? throw new global::System.ArgumentNullException(nameof(versionId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
-            this.LastUsedAt = lastUsedAt;
-            this.DatapointsCount = datapointsCount;
             this.DirectoryId = directoryId;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
             this.Schema = schema;
             this.Readme = readme;
             this.Tags = tags;
+            this.VersionId = versionId ?? throw new global::System.ArgumentNullException(nameof(versionId));
             this.Type = type;
             this.Environments = environments;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.CreatedBy = createdBy;
+            this.LastUsedAt = lastUsedAt;
             this.VersionName = versionName;
             this.VersionDescription = versionDescription;
+            this.DatapointsCount = datapointsCount;
             this.Datapoints = datapoints;
             this.Attributes = attributes;
         }

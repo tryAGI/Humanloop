@@ -136,6 +136,7 @@ namespace tryAGI.Humanloop
         /// <param name="id">
         /// Unique identifier for the Log.
         /// </param>
+        /// <param name="createdAt"></param>
         /// <param name="promptId"></param>
         /// <param name="versionId"></param>
         /// <param name="output"></param>
@@ -152,7 +153,6 @@ namespace tryAGI.Humanloop
         /// <param name="providerLatency"></param>
         /// <param name="error"></param>
         /// <param name="traceParentId"></param>
-        /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -179,7 +179,6 @@ namespace tryAGI.Humanloop
             global::System.DateTime? updatedAt)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.CreatedAt = createdAt;
             this.PromptId = promptId;
             this.VersionId = versionId;
             this.Output = output;
@@ -196,6 +195,7 @@ namespace tryAGI.Humanloop
             this.ProviderLatency = providerLatency;
             this.Error = error;
             this.TraceParentId = traceParentId;
+            this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
         }
 

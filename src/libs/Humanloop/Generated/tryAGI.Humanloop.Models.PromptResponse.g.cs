@@ -263,11 +263,27 @@ namespace tryAGI.Humanloop
         /// <param name="id">
         /// Unique identifier for the Prompt.
         /// </param>
-        /// <param name="directoryId">
-        /// ID of the directory that the file is in on Humanloop.
-        /// </param>
         /// <param name="model">
         /// The model instance used, e.g. gpt-4.
+        /// </param>
+        /// <param name="name">
+        /// Name of the Prompt.
+        /// </param>
+        /// <param name="versionId">
+        /// Unique identifier for the specific Prompt Version.
+        /// </param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="lastUsedAt"></param>
+        /// <param name="versionLogsCount">
+        /// The number of logs generated for this Prompt Version.
+        /// </param>
+        /// <param name="totalLogsCount">
+        /// The number of logs generated across all Prompt Versions.
+        /// </param>
+        /// <param name="inputs"></param>
+        /// <param name="directoryId">
+        /// ID of the directory that the file is in on Humanloop.
         /// </param>
         /// <param name="endpoint">
         /// The provider model endpoint used.
@@ -321,26 +337,10 @@ namespace tryAGI.Humanloop
         /// <param name="readme">
         /// Long description of the file.
         /// </param>
-        /// <param name="name">
-        /// Name of the Prompt.
-        /// </param>
         /// <param name="schema"></param>
-        /// <param name="versionId">
-        /// Unique identifier for the specific Prompt Version.
-        /// </param>
         /// <param name="type"></param>
         /// <param name="environments"></param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
         /// <param name="createdBy"></param>
-        /// <param name="lastUsedAt"></param>
-        /// <param name="versionLogsCount">
-        /// The number of logs generated for this Prompt Version.
-        /// </param>
-        /// <param name="totalLogsCount">
-        /// The number of logs generated across all Prompt Versions.
-        /// </param>
-        /// <param name="inputs"></param>
         /// <param name="evaluators"></param>
         /// <param name="evaluatorAggregates"></param>
 #if NET7_0_OR_GREATER
@@ -388,16 +388,8 @@ namespace tryAGI.Humanloop
         {
             this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.VersionId = versionId ?? throw new global::System.ArgumentNullException(nameof(versionId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
-            this.LastUsedAt = lastUsedAt;
-            this.VersionLogsCount = versionLogsCount;
-            this.TotalLogsCount = totalLogsCount;
-            this.Inputs = inputs ?? throw new global::System.ArgumentNullException(nameof(inputs));
             this.DirectoryId = directoryId;
+            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Endpoint = endpoint;
             this.Template = template;
             this.Provider = provider;
@@ -418,10 +410,18 @@ namespace tryAGI.Humanloop
             this.Description = description;
             this.Tags = tags;
             this.Readme = readme;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Schema = schema;
+            this.VersionId = versionId ?? throw new global::System.ArgumentNullException(nameof(versionId));
             this.Type = type;
             this.Environments = environments;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.CreatedBy = createdBy;
+            this.LastUsedAt = lastUsedAt;
+            this.VersionLogsCount = versionLogsCount;
+            this.TotalLogsCount = totalLogsCount;
+            this.Inputs = inputs ?? throw new global::System.ArgumentNullException(nameof(inputs));
             this.Evaluators = evaluators;
             this.EvaluatorAggregates = evaluatorAggregates;
         }
