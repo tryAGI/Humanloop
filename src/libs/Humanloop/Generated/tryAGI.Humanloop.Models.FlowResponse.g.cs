@@ -129,18 +129,18 @@ namespace tryAGI.Humanloop
         /// </summary>
         /// <param name="path"></param>
         /// <param name="id"></param>
-        /// <param name="directoryId"></param>
         /// <param name="name"></param>
+        /// <param name="versionId"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="lastUsedAt"></param>
+        /// <param name="directoryId"></param>
         /// <param name="description"></param>
         /// <param name="readme"></param>
         /// <param name="tags"></param>
-        /// <param name="versionId"></param>
         /// <param name="type"></param>
         /// <param name="environments"></param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
         /// <param name="createdBy"></param>
-        /// <param name="lastUsedAt"></param>
         /// <param name="versionName"></param>
         /// <param name="versionDescription"></param>
         /// <param name="attributes"></param>
@@ -168,18 +168,18 @@ namespace tryAGI.Humanloop
         {
             this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.VersionId = versionId ?? throw new global::System.ArgumentNullException(nameof(versionId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
-            this.LastUsedAt = lastUsedAt;
             this.DirectoryId = directoryId;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
             this.Readme = readme;
             this.Tags = tags;
+            this.VersionId = versionId ?? throw new global::System.ArgumentNullException(nameof(versionId));
             this.Type = type;
             this.Environments = environments;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.CreatedBy = createdBy;
+            this.LastUsedAt = lastUsedAt;
             this.VersionName = versionName;
             this.VersionDescription = versionDescription;
             this.Attributes = attributes;

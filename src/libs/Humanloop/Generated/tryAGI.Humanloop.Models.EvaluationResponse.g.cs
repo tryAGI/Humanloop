@@ -90,15 +90,15 @@ namespace tryAGI.Humanloop
         /// Total number of Runs in the Evaluation.
         /// </param>
         /// <param name="evaluators"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
         /// <param name="name">
         /// Name of the Evaluation.
         /// </param>
         /// <param name="fileId">
         /// ID of the File associated with the Evaluation.
         /// </param>
-        /// <param name="createdAt"></param>
         /// <param name="createdBy"></param>
-        /// <param name="updatedAt"></param>
         /// <param name="url">
         /// URL to view the Evaluation on Humanloop.
         /// </param>
@@ -121,11 +121,11 @@ namespace tryAGI.Humanloop
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.RunsCount = runsCount;
             this.Evaluators = evaluators ?? throw new global::System.ArgumentNullException(nameof(evaluators));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
             this.Name = name;
             this.FileId = fileId;
+            this.CreatedAt = createdAt;
             this.CreatedBy = createdBy;
+            this.UpdatedAt = updatedAt;
             this.Url = url;
             this.Status = status;
         }

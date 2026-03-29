@@ -46,11 +46,11 @@ namespace tryAGI.Humanloop
         /// <param name="name">
         /// Name of the function.
         /// </param>
-        /// <param name="description">
-        /// Description of the function.
-        /// </param>
         /// <param name="parameters">
         /// JSON Schema defining the function parameters.
+        /// </param>
+        /// <param name="description">
+        /// Description of the function.
         /// </param>
         /// <param name="strict">
         /// Whether strict mode is enabled.
@@ -65,8 +65,8 @@ namespace tryAGI.Humanloop
             bool? strict)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Parameters = parameters ?? throw new global::System.ArgumentNullException(nameof(parameters));
             this.Description = description;
+            this.Parameters = parameters ?? throw new global::System.ArgumentNullException(nameof(parameters));
             this.Strict = strict;
         }
 

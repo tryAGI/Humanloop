@@ -156,14 +156,14 @@ namespace tryAGI.Humanloop
         /// <summary>
         /// Initializes a new instance of the <see cref="PromptRequest" /> class.
         /// </summary>
+        /// <param name="model">
+        /// The model instance used, e.g. gpt-4.
+        /// </param>
         /// <param name="path">
         /// Path of the Prompt, including the name.
         /// </param>
         /// <param name="id">
         /// ID for an existing Prompt.
-        /// </param>
-        /// <param name="model">
-        /// The model instance used, e.g. gpt-4.
         /// </param>
         /// <param name="endpoint">
         /// The provider model endpoint used.
@@ -225,9 +225,9 @@ namespace tryAGI.Humanloop
             global::System.Collections.Generic.IList<string>? tags,
             string? readme)
         {
-            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Path = path;
             this.Id = id;
+            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Endpoint = endpoint;
             this.Template = template;
             this.Provider = provider;
