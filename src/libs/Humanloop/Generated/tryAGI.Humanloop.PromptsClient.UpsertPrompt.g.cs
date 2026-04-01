@@ -253,7 +253,6 @@ namespace tryAGI.Humanloop
             string? readme = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::tryAGI.Humanloop.PromptRequest
             {
                 Path = path,

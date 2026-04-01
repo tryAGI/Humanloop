@@ -207,7 +207,6 @@ namespace tryAGI.Humanloop
             string? versionDescription = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::tryAGI.Humanloop.UpdateVersionRequest
             {
                 VersionName = versionName,

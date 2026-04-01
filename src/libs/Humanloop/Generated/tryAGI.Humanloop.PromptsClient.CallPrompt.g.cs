@@ -247,7 +247,6 @@ namespace tryAGI.Humanloop
             string? user = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::tryAGI.Humanloop.PromptCallRequest
             {
                 VersionId = versionId,

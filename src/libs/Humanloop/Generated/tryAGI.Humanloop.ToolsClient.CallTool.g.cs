@@ -203,7 +203,6 @@ namespace tryAGI.Humanloop
             string? logId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::tryAGI.Humanloop.CallToolRequest
             {
                 VersionId = versionId,
