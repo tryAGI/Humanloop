@@ -199,6 +199,7 @@ namespace tryAGI.Humanloop
             string path,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::tryAGI.Humanloop.MoveRequest
             {
                 Path = path,
