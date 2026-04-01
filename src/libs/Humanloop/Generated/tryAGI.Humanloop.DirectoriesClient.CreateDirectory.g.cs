@@ -195,6 +195,7 @@ namespace tryAGI.Humanloop
             string? parentId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::tryAGI.Humanloop.CreateDirectoryRequest
             {
                 Path = path,
