@@ -5,6 +5,25 @@ namespace tryAGI.Humanloop
 {
     public partial class FlowsClient
     {
+
+
+        private static readonly global::tryAGI.Humanloop.EndPointSecurityRequirement s_GetFlowSecurityRequirement0 =
+            new global::tryAGI.Humanloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::tryAGI.Humanloop.EndPointAuthorizationRequirement[]
+                {                    new global::tryAGI.Humanloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::tryAGI.Humanloop.EndPointSecurityRequirement[] s_GetFlowSecurityRequirements =
+            new global::tryAGI.Humanloop.EndPointSecurityRequirement[]
+            {                s_GetFlowSecurityRequirement0,
+            };
         partial void PrepareGetFlowArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id,
@@ -42,12 +61,18 @@ namespace tryAGI.Humanloop
                 id: ref id,
                 versionId: ref versionId);
 
+
+            var __authorizations = global::tryAGI.Humanloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetFlowSecurityRequirements,
+                operationName: "GetFlowAsync");
+
             var __pathBuilder = new global::tryAGI.Humanloop.PathBuilder(
                 path: $"/flows/{id}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("versionId", versionId) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -57,7 +82,7 @@ namespace tryAGI.Humanloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

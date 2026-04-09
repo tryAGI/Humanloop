@@ -6,6 +6,7 @@ namespace tryAGI.Humanloop
     public sealed partial class HumanloopClient
     {
         /// <inheritdoc cref="HumanloopClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::tryAGI.Humanloop.EndPointAuthorization}?, bool)"/>
+
         public HumanloopClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,

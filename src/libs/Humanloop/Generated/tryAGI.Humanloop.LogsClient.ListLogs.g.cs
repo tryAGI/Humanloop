@@ -5,6 +5,25 @@ namespace tryAGI.Humanloop
 {
     public partial class LogsClient
     {
+
+
+        private static readonly global::tryAGI.Humanloop.EndPointSecurityRequirement s_ListLogsSecurityRequirement0 =
+            new global::tryAGI.Humanloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::tryAGI.Humanloop.EndPointAuthorizationRequirement[]
+                {                    new global::tryAGI.Humanloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::tryAGI.Humanloop.EndPointSecurityRequirement[] s_ListLogsSecurityRequirements =
+            new global::tryAGI.Humanloop.EndPointSecurityRequirement[]
+            {                s_ListLogsSecurityRequirement0,
+            };
         partial void PrepareListLogsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? page,
@@ -57,6 +76,12 @@ namespace tryAGI.Humanloop
                 versionId: ref versionId,
                 search: ref search);
 
+
+            var __authorizations = global::tryAGI.Humanloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ListLogsSecurityRequirements,
+                operationName: "ListLogsAsync");
+
             var __pathBuilder = new global::tryAGI.Humanloop.PathBuilder(
                 path: "/logs",
                 baseUri: HttpClient.BaseAddress); 
@@ -66,7 +91,7 @@ namespace tryAGI.Humanloop
                 .AddOptionalParameter("fileId", fileId)
                 .AddOptionalParameter("versionId", versionId)
                 .AddOptionalParameter("search", search) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -76,7 +101,7 @@ namespace tryAGI.Humanloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

@@ -5,6 +5,25 @@ namespace tryAGI.Humanloop
 {
     public partial class DatasetsClient
     {
+
+
+        private static readonly global::tryAGI.Humanloop.EndPointSecurityRequirement s_GetDatasetSecurityRequirement0 =
+            new global::tryAGI.Humanloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::tryAGI.Humanloop.EndPointAuthorizationRequirement[]
+                {                    new global::tryAGI.Humanloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::tryAGI.Humanloop.EndPointSecurityRequirement[] s_GetDatasetSecurityRequirements =
+            new global::tryAGI.Humanloop.EndPointSecurityRequirement[]
+            {                s_GetDatasetSecurityRequirement0,
+            };
         partial void PrepareGetDatasetArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id,
@@ -47,13 +66,19 @@ namespace tryAGI.Humanloop
                 versionId: ref versionId,
                 includeDatapoints: ref includeDatapoints);
 
+
+            var __authorizations = global::tryAGI.Humanloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetDatasetSecurityRequirements,
+                operationName: "GetDatasetAsync");
+
             var __pathBuilder = new global::tryAGI.Humanloop.PathBuilder(
                 path: $"/datasets/{id}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("versionId", versionId)
                 .AddOptionalParameter("includeDatapoints", includeDatapoints?.ToString().ToLowerInvariant()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -63,7 +88,7 @@ namespace tryAGI.Humanloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
