@@ -5,6 +5,25 @@ namespace tryAGI.Humanloop
 {
     public partial class ToolsClient
     {
+
+
+        private static readonly global::tryAGI.Humanloop.EndPointSecurityRequirement s_UpsertToolSecurityRequirement0 =
+            new global::tryAGI.Humanloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::tryAGI.Humanloop.EndPointAuthorizationRequirement[]
+                {                    new global::tryAGI.Humanloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::tryAGI.Humanloop.EndPointSecurityRequirement[] s_UpsertToolSecurityRequirements =
+            new global::tryAGI.Humanloop.EndPointSecurityRequirement[]
+            {                s_UpsertToolSecurityRequirement0,
+            };
         partial void PrepareUpsertToolArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::tryAGI.Humanloop.ToolRequest request);
@@ -40,9 +59,15 @@ namespace tryAGI.Humanloop
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::tryAGI.Humanloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_UpsertToolSecurityRequirements,
+                operationName: "UpsertToolAsync");
+
             var __pathBuilder = new global::tryAGI.Humanloop.PathBuilder(
                 path: "/tools",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -52,7 +77,7 @@ namespace tryAGI.Humanloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
