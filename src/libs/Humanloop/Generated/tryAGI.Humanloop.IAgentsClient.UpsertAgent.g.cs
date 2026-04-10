@@ -8,11 +8,13 @@ namespace tryAGI.Humanloop
         /// Upsert Agent
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::tryAGI.Humanloop.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::tryAGI.Humanloop.AgentResponse> UpsertAgentAsync(
 
             global::tryAGI.Humanloop.AgentRequest request,
+            global::tryAGI.Humanloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Upsert Agent
@@ -31,6 +33,7 @@ namespace tryAGI.Humanloop
         /// <param name="readme"></param>
         /// <param name="temperature"></param>
         /// <param name="maxTokens"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::tryAGI.Humanloop.AgentResponse> UpsertAgentAsync(
@@ -48,6 +51,7 @@ namespace tryAGI.Humanloop
             string? readme = default,
             double? temperature = default,
             int? maxTokens = default,
+            global::tryAGI.Humanloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
