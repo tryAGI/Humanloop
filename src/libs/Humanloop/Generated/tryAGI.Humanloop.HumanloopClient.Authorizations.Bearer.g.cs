@@ -25,6 +25,7 @@ namespace tryAGI.Humanloop
             Authorizations.Add(new global::tryAGI.Humanloop.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "BearerAuth",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

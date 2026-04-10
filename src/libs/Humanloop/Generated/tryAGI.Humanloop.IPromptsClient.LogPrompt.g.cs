@@ -8,11 +8,13 @@ namespace tryAGI.Humanloop
         /// Log Prompt
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::tryAGI.Humanloop.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::tryAGI.Humanloop.CreatePromptLogResponse> LogPromptAsync(
 
             global::tryAGI.Humanloop.PromptLogRequest request,
+            global::tryAGI.Humanloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Log Prompt
@@ -49,6 +51,7 @@ namespace tryAGI.Humanloop
         /// <param name="user"></param>
         /// <param name="save"></param>
         /// <param name="logId"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::tryAGI.Humanloop.CreatePromptLogResponse> LogPromptAsync(
@@ -80,6 +83,7 @@ namespace tryAGI.Humanloop
             string? user = default,
             bool? save = default,
             string? logId = default,
+            global::tryAGI.Humanloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
