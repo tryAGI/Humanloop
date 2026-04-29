@@ -124,8 +124,8 @@ namespace tryAGI.Humanloop
                 PrepareDeletePromptVersionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    versionId: versionId);
+                    id: id!,
+                    versionId: versionId!);
 
                 return __httpRequest;
             }

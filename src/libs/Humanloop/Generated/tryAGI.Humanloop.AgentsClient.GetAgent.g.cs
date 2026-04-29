@@ -132,7 +132,7 @@ namespace tryAGI.Humanloop
                 PrepareGetAgentRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     versionId: versionId);
 
                 return __httpRequest;

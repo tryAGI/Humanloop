@@ -127,7 +127,7 @@ namespace tryAGI.Humanloop
                 PrepareGetFileByPathRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    path: path);
+                    path: path!);
 
                 return __httpRequest;
             }
