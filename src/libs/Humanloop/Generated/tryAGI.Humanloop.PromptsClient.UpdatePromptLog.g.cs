@@ -143,8 +143,8 @@ namespace tryAGI.Humanloop
                 PrepareUpdatePromptLogRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    logId: logId,
+                    id: id!,
+                    logId: logId!,
                     request: request);
 
                 return __httpRequest;

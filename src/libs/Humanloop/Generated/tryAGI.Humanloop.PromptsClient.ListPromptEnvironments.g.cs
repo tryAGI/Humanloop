@@ -124,7 +124,7 @@ namespace tryAGI.Humanloop
                 PrepareListPromptEnvironmentsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id);
+                    id: id!);
 
                 return __httpRequest;
             }

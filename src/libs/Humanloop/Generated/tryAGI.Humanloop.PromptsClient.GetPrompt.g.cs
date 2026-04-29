@@ -138,7 +138,7 @@ namespace tryAGI.Humanloop
                 PrepareGetPromptRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     versionId: versionId,
                     environment: environment);
 

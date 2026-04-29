@@ -124,8 +124,8 @@ namespace tryAGI.Humanloop
                 PrepareRemovePromptDeploymentRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    environmentId: environmentId);
+                    id: id!,
+                    environmentId: environmentId!);
 
                 return __httpRequest;
             }

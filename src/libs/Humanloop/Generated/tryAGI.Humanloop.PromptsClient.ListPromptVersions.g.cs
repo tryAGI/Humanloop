@@ -132,7 +132,7 @@ namespace tryAGI.Humanloop
                 PrepareListPromptVersionsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     status: status);
 
                 return __httpRequest;

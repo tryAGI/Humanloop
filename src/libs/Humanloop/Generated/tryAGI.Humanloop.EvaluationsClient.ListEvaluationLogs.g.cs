@@ -138,7 +138,7 @@ namespace tryAGI.Humanloop
                 PrepareListEvaluationLogsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     page: page,
                     size: size);
 

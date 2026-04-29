@@ -143,8 +143,8 @@ namespace tryAGI.Humanloop
                 PrepareSetPromptDeploymentRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    environmentId: environmentId,
+                    id: id!,
+                    environmentId: environmentId!,
                     request: request);
 
                 return __httpRequest;
