@@ -26,5 +26,27 @@ namespace tryAGI.Humanloop
             global::tryAGI.Humanloop.ListPromptsOrder? order = default,
             global::tryAGI.Humanloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// List Prompts<br/>
+        /// Get a paginated list of Prompts.
+        /// </summary>
+        /// <param name="page"></param>
+        /// <param name="size"></param>
+        /// <param name="name"></param>
+        /// <param name="userFilter"></param>
+        /// <param name="sortBy"></param>
+        /// <param name="order"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::tryAGI.Humanloop.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::tryAGI.Humanloop.AutoSDKHttpResponse<global::tryAGI.Humanloop.PaginatedPromptResponse>> ListPromptsAsResponseAsync(
+            int? page = default,
+            int? size = default,
+            string? name = default,
+            string? userFilter = default,
+            string? sortBy = default,
+            global::tryAGI.Humanloop.ListPromptsOrder? order = default,
+            global::tryAGI.Humanloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

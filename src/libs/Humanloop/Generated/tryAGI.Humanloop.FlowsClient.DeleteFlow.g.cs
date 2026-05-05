@@ -48,6 +48,24 @@ namespace tryAGI.Humanloop
             global::tryAGI.Humanloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            await DeleteFlowAsResponseAsync(
+                id: id,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// Delete Flow
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::tryAGI.Humanloop.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::tryAGI.Humanloop.AutoSDKHttpResponse> DeleteFlowAsResponseAsync(
+            string id,
+            global::tryAGI.Humanloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareDeleteFlowArguments(
@@ -76,6 +94,7 @@ namespace tryAGI.Humanloop
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::tryAGI.Humanloop.PathBuilder(
                                 path: $"/flows/{id}",
                                 baseUri: HttpClient.BaseAddress);
@@ -149,6 +168,8 @@ namespace tryAGI.Humanloop
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -159,6 +180,11 @@ namespace tryAGI.Humanloop
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::tryAGI.Humanloop.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::tryAGI.Humanloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -176,6 +202,8 @@ namespace tryAGI.Humanloop
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -185,8 +213,7 @@ namespace tryAGI.Humanloop
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::tryAGI.Humanloop.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -195,6 +222,11 @@ namespace tryAGI.Humanloop
                         __attempt < __maxAttempts &&
                         global::tryAGI.Humanloop.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::tryAGI.Humanloop.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::tryAGI.Humanloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::tryAGI.Humanloop.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -211,14 +243,15 @@ namespace tryAGI.Humanloop
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::tryAGI.Humanloop.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -258,6 +291,8 @@ namespace tryAGI.Humanloop
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -278,6 +313,8 @@ namespace tryAGI.Humanloop
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
 
@@ -298,6 +335,10 @@ namespace tryAGI.Humanloop
                                 {
                                     __response.EnsureSuccessStatusCode();
 
+                return new global::tryAGI.Humanloop.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::tryAGI.Humanloop.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -319,6 +360,10 @@ namespace tryAGI.Humanloop
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
+                                    return new global::tryAGI.Humanloop.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::tryAGI.Humanloop.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
