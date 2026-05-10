@@ -87,5 +87,6 @@ namespace tryAGI.Humanloop
         public ChatMessage()
         {
         }
+
     }
 }
