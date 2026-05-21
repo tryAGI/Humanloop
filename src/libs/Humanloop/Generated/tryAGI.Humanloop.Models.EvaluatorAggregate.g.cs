@@ -57,5 +57,6 @@ namespace tryAGI.Humanloop
         public EvaluatorAggregate()
         {
         }
+
     }
 }

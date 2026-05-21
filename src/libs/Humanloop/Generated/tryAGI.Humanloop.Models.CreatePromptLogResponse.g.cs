@@ -69,5 +69,6 @@ namespace tryAGI.Humanloop
         public CreatePromptLogResponse()
         {
         }
+
     }
 }
