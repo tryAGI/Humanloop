@@ -20,7 +20,7 @@ namespace tryAGI.Humanloop.JsonConverters
                     {
                         return global::tryAGI.Humanloop.ChatMessageRoleExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

@@ -4,12 +4,12 @@
 namespace tryAGI.Humanloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DatasetResponseType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dataset,
     }
