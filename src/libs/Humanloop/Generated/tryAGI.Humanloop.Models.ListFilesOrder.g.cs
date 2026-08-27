@@ -4,16 +4,16 @@
 namespace tryAGI.Humanloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ListFilesOrder
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

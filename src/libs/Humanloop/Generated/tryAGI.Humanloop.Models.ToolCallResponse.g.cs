@@ -4,7 +4,7 @@
 namespace tryAGI.Humanloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ToolCallResponse
     {
@@ -23,7 +23,7 @@ namespace tryAGI.Humanloop
         public required string Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("function")]
         public global::tryAGI.Humanloop.ToolCallResponseFunction? Function { get; set; }

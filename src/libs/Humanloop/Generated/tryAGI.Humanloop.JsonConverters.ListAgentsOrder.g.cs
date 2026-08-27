@@ -20,7 +20,7 @@ namespace tryAGI.Humanloop.JsonConverters
                     {
                         return global::tryAGI.Humanloop.ListAgentsOrderExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

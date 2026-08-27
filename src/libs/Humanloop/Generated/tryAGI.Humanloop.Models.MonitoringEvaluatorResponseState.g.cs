@@ -9,11 +9,11 @@ namespace tryAGI.Humanloop
     public enum MonitoringEvaluatorResponseState
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Inactive,
     }

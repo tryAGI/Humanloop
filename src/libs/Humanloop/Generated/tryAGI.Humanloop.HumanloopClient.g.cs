@@ -40,7 +40,7 @@ namespace tryAGI.Humanloop
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::tryAGI.Humanloop.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -50,7 +50,7 @@ namespace tryAGI.Humanloop
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AgentsClient Agents => new AgentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -59,7 +59,7 @@ namespace tryAGI.Humanloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DatasetsClient Datasets => new DatasetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -68,7 +68,7 @@ namespace tryAGI.Humanloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DirectoriesClient Directories => new DirectoriesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -77,7 +77,7 @@ namespace tryAGI.Humanloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EvaluationsClient Evaluations => new EvaluationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -86,7 +86,7 @@ namespace tryAGI.Humanloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EvaluatorsClient Evaluators => new EvaluatorsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -95,7 +95,7 @@ namespace tryAGI.Humanloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FilesClient Files => new FilesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -104,7 +104,7 @@ namespace tryAGI.Humanloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FlowsClient Flows => new FlowsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -113,7 +113,7 @@ namespace tryAGI.Humanloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public LogsClient Logs => new LogsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -122,7 +122,7 @@ namespace tryAGI.Humanloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PromptsClient Prompts => new PromptsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -131,7 +131,7 @@ namespace tryAGI.Humanloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolsClient Tools => new ToolsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

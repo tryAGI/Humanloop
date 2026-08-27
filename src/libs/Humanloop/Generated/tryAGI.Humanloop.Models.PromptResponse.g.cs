@@ -102,19 +102,19 @@ namespace tryAGI.Humanloop
         public int? Seed { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("responseFormat")]
         public global::tryAGI.Humanloop.ResponseFormat? ResponseFormat { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tools")]
         public global::System.Collections.Generic.IList<global::tryAGI.Humanloop.ToolFunction>? Tools { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("linkedTools")]
         public global::System.Collections.Generic.IList<global::tryAGI.Humanloop.LinkedToolResponse>? LinkedTools { get; set; }
@@ -144,7 +144,7 @@ namespace tryAGI.Humanloop
         public string? Description { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
         public global::System.Collections.Generic.IList<string>? Tags { get; set; }
@@ -163,7 +163,7 @@ namespace tryAGI.Humanloop
         public required string Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("schema")]
         public object? Schema { get; set; }
@@ -176,40 +176,40 @@ namespace tryAGI.Humanloop
         public required string VersionId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::tryAGI.Humanloop.JsonConverters.PromptResponseTypeJsonConverter))]
         public global::tryAGI.Humanloop.PromptResponseType? Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("environments")]
         public global::System.Collections.Generic.IList<global::tryAGI.Humanloop.EnvironmentResponse>? Environments { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updatedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdBy")]
         public global::tryAGI.Humanloop.UserResponse? CreatedBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lastUsedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -230,20 +230,20 @@ namespace tryAGI.Humanloop
         public required int TotalLogsCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("inputs")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::tryAGI.Humanloop.InputResponse> Inputs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluators")]
         public global::System.Collections.Generic.IList<global::tryAGI.Humanloop.MonitoringEvaluatorResponse>? Evaluators { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluatorAggregates")]
         public global::System.Collections.Generic.IList<global::tryAGI.Humanloop.EvaluatorAggregate>? EvaluatorAggregates { get; set; }

@@ -4,7 +4,7 @@
 namespace tryAGI.Humanloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AgentRequestAttributes
     {

@@ -4,12 +4,12 @@
 namespace tryAGI.Humanloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PopulatePromptResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("result")]
         public global::System.Collections.Generic.IList<global::tryAGI.Humanloop.ChatMessage>? Result { get; set; }
