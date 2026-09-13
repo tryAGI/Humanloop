@@ -1,0 +1,229 @@
+
+#nullable enable
+
+#pragma warning disable CS0618 // Type or member is obsolete
+#pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
+
+namespace tryAGI.Humanloop
+{
+    /// <summary>
+    ///
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        Converters = new global::System.Type[]
+        {
+        })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.UserResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.EnvironmentResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.InputResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.MonitoringEvaluatorResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.MonitoringEvaluatorResponseState), TypeInfoPropertyName = "MonitoringEvaluatorResponseState2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.EvaluatorAggregate))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::tryAGI.Humanloop.EnvironmentResponse>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::tryAGI.Humanloop.InputResponse>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::tryAGI.Humanloop.MonitoringEvaluatorResponse>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::tryAGI.Humanloop.EvaluatorAggregate>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.EvaluatorResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.EvaluatorResponseType), TypeInfoPropertyName = "EvaluatorResponseType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.EvaluatorRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.PaginatedEvaluatorResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::tryAGI.Humanloop.EvaluatorResponse>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.MoveRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.SetDeploymentRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.UpdateMonitoringRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::tryAGI.Humanloop.UpdateMonitoringRequestActivateItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.UpdateMonitoringRequestActivateItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::tryAGI.Humanloop.UpdateMonitoringRequestDeactivateItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.UpdateMonitoringRequestDeactivateItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.LogEvaluatorRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.CreateLogResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.ListEvaluatorsOrder), TypeInfoPropertyName = "ListEvaluatorsOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.MonitoringEvaluatorResponseState?), TypeInfoPropertyName = "NullableMonitoringEvaluatorResponseState2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.EvaluatorResponseType?), TypeInfoPropertyName = "NullableEvaluatorResponseType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::tryAGI.Humanloop.ListEvaluatorsOrder?), TypeInfoPropertyName = "NullableListEvaluatorsOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::tryAGI.Humanloop.EnvironmentResponse>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::tryAGI.Humanloop.InputResponse>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::tryAGI.Humanloop.MonitoringEvaluatorResponse>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::tryAGI.Humanloop.EvaluatorAggregate>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::tryAGI.Humanloop.EvaluatorResponse>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::tryAGI.Humanloop.UpdateMonitoringRequestActivateItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::tryAGI.Humanloop.UpdateMonitoringRequestDeactivateItem>))]
+    internal sealed partial class EvaluatorsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+    /// <summary>
+    ///
+    /// </summary>
+    public sealed partial class EvaluatorsSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+        private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
+
+
+        private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static EvaluatorsSourceGenerationContext Default { get; } = new(DefaultOptions);
+
+        private EvaluatorsSourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
+            : base(options)
+        {
+        }
+
+        /// <inheritdoc />
+        protected override global::System.Text.Json.JsonSerializerOptions? GeneratedSerializerOptions => DefaultOptions;
+
+        /// <inheritdoc />
+        public override global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(global::System.Type type)
+        {
+            return Resolver.GetTypeInfo(type, Options);
+        }
+
+        /// <summary>
+        /// Adds this package's converters to <paramref name="options"/>.
+        /// </summary>
+        /// <remarks>
+        /// A converter has to be on the options a chained resolver builds its JsonTypeInfo against,
+        /// and a context resolves types from every package below it. Each package contributes only
+        /// what it owns and calls down the chain for the rest, so the family's converter table is
+        /// written once rather than copied into all of them.
+        /// </remarks>
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
+        {
+            options.Converters.Add(new global::tryAGI.Humanloop.JsonConverters.UnixTimestampJsonConverter());
+            options.Converters.Add(new LazyEnumJsonConverterFactory());
+        }
+
+        private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
+        {
+            var options = new global::System.Text.Json.JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+                TypeInfoResolver = Resolver,
+            };
+            AddConverters(options);
+
+            return options;
+        }
+
+
+        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
+        {
+            public override bool CanConvert(global::System.Type typeToConvert)
+            {
+                return
+                    typeToConvert == typeof(global::tryAGI.Humanloop.MonitoringEvaluatorResponseState)
+
+                    || typeToConvert == typeof(global::tryAGI.Humanloop.MonitoringEvaluatorResponseState?)
+
+                    || typeToConvert == typeof(global::tryAGI.Humanloop.EvaluatorResponseType)
+
+                    || typeToConvert == typeof(global::tryAGI.Humanloop.EvaluatorResponseType?)
+
+                    || typeToConvert == typeof(global::tryAGI.Humanloop.ListEvaluatorsOrder)
+
+                    || typeToConvert == typeof(global::tryAGI.Humanloop.ListEvaluatorsOrder?);
+            }
+
+            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
+                global::System.Type typeToConvert,
+                global::System.Text.Json.JsonSerializerOptions options)
+            {
+                if (typeToConvert == typeof(global::tryAGI.Humanloop.MonitoringEvaluatorResponseState))
+                {
+                    return new global::tryAGI.Humanloop.JsonConverters.MonitoringEvaluatorResponseStateJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::tryAGI.Humanloop.MonitoringEvaluatorResponseState?))
+                {
+                    return new global::tryAGI.Humanloop.JsonConverters.MonitoringEvaluatorResponseStateNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::tryAGI.Humanloop.EvaluatorResponseType))
+                {
+                    return new global::tryAGI.Humanloop.JsonConverters.EvaluatorResponseTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::tryAGI.Humanloop.EvaluatorResponseType?))
+                {
+                    return new global::tryAGI.Humanloop.JsonConverters.EvaluatorResponseTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::tryAGI.Humanloop.ListEvaluatorsOrder))
+                {
+                    return new global::tryAGI.Humanloop.JsonConverters.ListEvaluatorsOrderJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::tryAGI.Humanloop.ListEvaluatorsOrder?))
+                {
+                    return new global::tryAGI.Humanloop.JsonConverters.ListEvaluatorsOrderNullableJsonConverter();
+                }
+                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
+            }
+        }
+
+        private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
+        {
+            private readonly object _gate = new();
+            private readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[] _resolvers = new global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[1];
+
+            public global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(
+                global::System.Type type,
+                global::System.Text.Json.JsonSerializerOptions options)
+            {
+                for (var index = 0; index < _resolvers.Length; index++)
+                {
+                    var typeInfo = GetResolver(index).GetTypeInfo(type, options);
+                    if (typeInfo is not null)
+                    {
+                        return typeInfo;
+                    }
+                }
+
+                return null;
+            }
+
+            private global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver GetResolver(int index)
+            {
+                var resolver = global::System.Threading.Volatile.Read(ref _resolvers[index]);
+                if (resolver is not null)
+                {
+                    return resolver;
+                }
+
+                lock (_gate)
+                {
+                    return _resolvers[index] ??= CreateResolver(index);
+                }
+            }
+
+            private static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver CreateResolver(int index)
+            {
+                return index switch
+                {
+                    0 => new EvaluatorsSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
+                };
+            }
+        }
+    }
+}
